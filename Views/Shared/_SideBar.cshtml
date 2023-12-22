@@ -1,7 +1,15 @@
-﻿@*
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+
 @{
+
     List<Object> menuItems = new List<Object>();
 
     menuItems.Add(new
@@ -30,56 +38,66 @@
 
     menuItems.Add(new
     {
-        text = "Extras",
+        text = "Account",
         separator = true,
     });
     menuItems.Add(new
     {
-        text = "Reports",
-        iconCss = "fa-solid fa-chart-simple",
-        url = "#"
-    }); menuItems.Add(new
+        text = "Login",
+        iconCss = "fa-solid fa-right-to-bracket",
+        url = "/_LoginPartial"
+    }); 
+    menuItems.Add(new
     {
-        text = "Settings",
-        iconCss = "fa-solid fa-gear",
-        url = "#"
+        text = "Logout",
+        iconCss = "fa-solid fa-user-secret",
+        url = "~/Areas/Identity/Pages/Account/Logout"
     });
+    
 }
 
 
-<ejs-sidebar id="sidebar" width="290px" enableDock dockSize="100px"
-             target=".dock-target" enableGestures="false">
-    <e-content-template>
+    <ejs-sidebar id="sidebar" width="290px" enableDock dockSize="100px"
+    target=".dock-target" enableGestures="false">
+        <e-content-template>
 
-        <div class="logo-wrapper">
-            <div class="app-logo">
-                <img src="~/logo.png" />
+            <div class="logo-wrapper">
+                <div class="app-logo">
+                    <img src="~/logo.png" />
+                </div>
+                <div class="w-100"></div>
+                <i id="sidebar-toggler" class="fa-solid"></i>
             </div>
-            <div class="w-100"></div>
-            <i id="sidebar-toggler" class="fa-solid"></i>
-        </div>
 
-        <div class="profile-wrapper">
-            <img class="profile-pic" src="~/profile.jpg" />
-            <div class="titles d-flex flex-column ps-3">
-                <h6 class="mb-0">Wallet App</h6>
-                <span class="text-muted">Dummy User</span>
+            <div class="profile-wrapper">
+                <div class="titles d-flex flex-column ps-3">
+                    <h6 class="mb-0">Wallet Web</h6>
+                    <span class="text-muted">
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <span>Hello @UserManager.GetUserName(User)</span>
+                    }
+                    else
+                    {
+                        <a>Please Log In</a>
+                    }
+                </span>
+                </div>
             </div>
-        </div>
 
-        <ejs-menu id="menu"
-                  items="menuItems"
-                  orientation="Vertical"
-                  hamburgerMode></ejs-menu>
-    </e-content-template>
-</ejs-sidebar>
+            <ejs-menu id="menu"
+            items="menuItems"
+            orientation="Vertical"
+            hamburgerMode></ejs-menu>
+        </e-content-template>
+    </ejs-sidebar>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
         dockBar = document.getElementById('sidebar').ej2_instances[0];
         document.getElementById('sidebar-toggler').onclick = function () {
-            dockBar.toggle();
+        dockBar.toggle();
         };
-    });
+        });
 
-</script>
+    </script>

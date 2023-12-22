@@ -1,9 +1,11 @@
 ﻿using Expense_Tracker.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Expense_Tracker.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,9 +15,14 @@ namespace Expense_Tracker.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Landing()
         {
             return View();
+        }
+
+        public IActionResult Index()
+        {
+            return View("~/View/Dashboard/Index.cshtml");
         }
 
         public IActionResult Privacy()
@@ -28,5 +35,7 @@ namespace Expense_Tracker.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

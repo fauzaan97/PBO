@@ -48,11 +48,22 @@ body {
     box-shadow: none;
 }
 
+.buttons .btn-secondary:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
 /*Hyperlink*/
 .no-a-decoration, .no-a-decoration:hover {
     text-decoration: none;
     color: inherit;
 }
+
+.btn:hover {
+    background-color: white;
+    color: grey;
+}
+
 
 /*Grid*/
 .e-grid {
@@ -349,3 +360,10 @@ img.profile-pic {
     .widget.chart {
         padding: 5px;
     }
+
+
+/*No Side Bar*/
+.no-sidebar {
+    margin-left: 0;
+    padding-left: 0;
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Expense Tracker Copy\\Expense Tracker.csproj": {}
+    "D:\\Expense Tracker Login\\Expense Tracker.csproj": {}
   },
   "projects": {
-    "D:\\Expense Tracker Copy\\Expense Tracker.csproj": {
+    "D:\\Expense Tracker Login\\Expense Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Expense Tracker Copy\\Expense Tracker.csproj",
+        "projectUniqueName": "D:\\Expense Tracker Login\\Expense Tracker.csproj",
         "projectName": "Expense Tracker",
-        "projectPath": "D:\\Expense Tracker Copy\\Expense Tracker.csproj",
+        "projectPath": "D:\\Expense Tracker Login\\Expense Tracker.csproj",
         "packagesPath": "C:\\Users\\ayahr\\.nuget\\packages\\",
-        "outputPath": "D:\\Expense Tracker Copy\\obj\\",
+        "outputPath": "D:\\Expense Tracker Login\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.23, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.25, )"
