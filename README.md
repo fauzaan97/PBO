@@ -3,7 +3,7 @@
    Wallet Web adalah website yang menyimpan dan memvisualisasi data pendapatan dan pengeluaran pengguna. Pengguna bisa membuat akun terlebih dahulu. Untuk penggunaan selanjutnya, pengguna yang sudah memiliki akun bisa langsung masuk tanpa perlu membuat lagi. Pengguna bisa memasukkan data pengeluaran dan pendapatan yang kemudian disimpan dalam database server. Data tersebut kemudian ditampilkan kembali pada GUI dalam bentuk tabel. Selain itu, data yang tersimpan juga dapat di-update atau dihapus. Jika sudah selesai menggunakan, pengguna bisa keluar dari website.
 
 
-**Creator**
+**Create by PBO NGGIH**
 
 1. 22/492673/TK/53930   Athaya Harmana putri
 
