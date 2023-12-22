@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Expense_Tracker.Controllers
 {
-    [Authorize]
+   
     public class DashboardController : Controller
     {
 

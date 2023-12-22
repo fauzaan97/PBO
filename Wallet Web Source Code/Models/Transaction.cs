@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace Expense_Tracker.Models
 {
-    [Authorize]
+ 
     public class Transaction
     { 
         [Key]

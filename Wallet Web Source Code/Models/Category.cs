@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Expense_Tracker.Models
 {
-    [Authorize]
+ 
     public class Category
     {
         [Key]

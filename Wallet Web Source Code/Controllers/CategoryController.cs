@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Expense_Tracker.Controllers
 {
-    [Authorize]
+ 
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;

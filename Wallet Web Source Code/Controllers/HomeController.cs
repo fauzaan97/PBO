@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace Expense_Tracker.Controllers
 {
-    [Authorize]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

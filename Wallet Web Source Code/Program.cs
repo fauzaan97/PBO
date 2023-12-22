@@ -41,7 +41,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mgo+DSMBMAY9C3t2
         app.UseAuthorization();
 
         app.MapRazorPages();
-
+/*
 app.Use(async (context, next) =>
 {
     // Get the SignInManager and UserManager from the request services
@@ -80,11 +80,11 @@ app.UseEndpoints(endpoints =>
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
-});
+});*/
 
-//app.MapControllerRoute(
-//  name: "default",
-//pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+app.MapControllerRoute(
+  name: "default",
+pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 //pattern: "{controller=Home}/{action=Landing}/{id?}");
 
 

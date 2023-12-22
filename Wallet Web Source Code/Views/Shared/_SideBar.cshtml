@@ -45,15 +45,19 @@
     {
         text = "Login",
         iconCss = "fa-solid fa-right-to-bracket",
-        url = "/_LoginPartial"
+        url = "#"
     }); 
     menuItems.Add(new
     {
         text = "Logout",
         iconCss = "fa-solid fa-user-secret",
-        url = "~/Areas/Identity/Pages/Account/Logout"
+        url = "#"
     });
-    
+    @*menuItems.Add(new
+    {
+        text = "Login and Logout has not been syncrhronize yet",
+    });
+    *@
 }
 
 
@@ -73,14 +77,7 @@
                 <div class="titles d-flex flex-column ps-3">
                     <h6 class="mb-0">Wallet Web</h6>
                     <span class="text-muted">
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <span>Hello @UserManager.GetUserName(User)</span>
-                    }
-                    else
-                    {
-                        <a>Please Log In</a>
-                    }
+                    Hello Wizard Finance!
                 </span>
                 </div>
             </div>
@@ -89,6 +86,10 @@
             items="menuItems"
             orientation="Vertical"
             hamburgerMode></ejs-menu>
+
+        <div class="row">
+            <a>Login and Logout has not been syncrhronize yet</a>
+        </div>
         </e-content-template>
     </ejs-sidebar>
 
