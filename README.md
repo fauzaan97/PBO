@@ -29,3 +29,8 @@ aplikasi kami berbasis web. namun, belum dihosting jadi masih menggunakan lokal 
    - Untuk menambahkan transaksi, klik tombol "+ New Transaction". Kemudian masukkan tanggal transaksi, kategori transaksi, dan jumlah transaksi, serta catatan mengenai transaksi tersebut. Jika sudah, klik "Submit"
    - Untuk menyunting transaksi, klik tombol dengan gambar pensil. Kemudian ubah tanggal, kategori, jumlah, dan catatan sesuai yang diinginkan. Jika sudah, klik "Submit"
    - Untuk menghapus transaksi, tekan tombol dengan gambar tempat sampah. Kemudian tekan "OK" pada notifikasi yang muncul untuk menghapus atau "cancel" bila tidak jadi menghapus
+
+**Credit:**
+
+Repositori ini adalah tugas Object Oriented Programming, dalam pembuatan repositori ini kami menggunakan tutorial dari youtube yang dicantumkan yaitu:
+1. [Full Tutorial] (https://youtu.be/zQ5eijfpuu8?feature=shared)
